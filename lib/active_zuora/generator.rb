@@ -197,6 +197,9 @@ module ActiveZuora
         include LazyAttr
         exclude_from_queries :overage_price, :included_units,
           :discount_amount, :discount_percentage, :rollover_balance
+        # as of 2016-09-13, this deviates from the main gem repositoiry
+        # at https://github.com/sportngin/active_zuora
+        # it has been updated to remove lazy loading of :price
       end
 
       customize 'Refund' do
