@@ -22,8 +22,11 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = [ "README.md" ]
 
   s.add_runtime_dependency('savon', ["~> 1.2.0"])
-  s.add_runtime_dependency('activesupport', [">= 3.0.0", "< 5.0.0"])
-  s.add_runtime_dependency('activemodel', [">= 3.0.0", "< 5.0.0"])
+  # as of 2016-09-13, this deviates from the main gem repositoiry
+  # at https://github.com/sportngin/active_zuora
+  # it has been updated to allow ActiveRecord 5
+  s.add_runtime_dependency('activesupport', [">= 3.0.0", "< 5.1.0"])
+  s.add_runtime_dependency('activemodel', [">= 3.0.0", "< 5.1.0"])
 
   s.add_development_dependency('rake', [">= 0.8.7"])
   s.add_development_dependency('rspec', [">= 3.0.0"])
